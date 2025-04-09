@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      // Get the current path excluding the repository name
+      var segmentCount = 1; // GitHub Pages has 1 segment for repo name
+      var path = window.location.pathname;
+      var repoName = "/asynk-race"; // Update this with your repo name
+
+      // Store the full path for later use
+      var redirect = path.substr(path.indexOf(repoName) + repoName.length);
+
+      // If there's a query string, save it too
+      if (window.location.search) {
+        redirect += window.location.search;
+      }
+
+      // Save the redirect route to session storage
+      sessionStorage.setItem("redirect", redirect);
+
+      // Redirect to the home page
+      window.location.href = repoName + "/";
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>
