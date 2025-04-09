@@ -6,9 +6,9 @@ import {
   Winner,
   WinnerWithCar,
 } from "./types";
-import { mockData } from "./mockData.ts";
+import { mockData } from "./mockData";
 
-const BASE_URL = "./src/api";
+const BASE_URL = "/api";
 
 // Determine if we're using mock data or real API
 // When running with Vite standalone, there's no backend server
